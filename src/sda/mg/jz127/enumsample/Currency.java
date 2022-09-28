@@ -1,6 +1,6 @@
 package sda.mg.jz127.enumsample;
 
-public enum Currency {
+enum Currency {
     PLN("PLN", 0.01),
     USD("USD", 1.01),
     EUR("EUR", 0.99),
