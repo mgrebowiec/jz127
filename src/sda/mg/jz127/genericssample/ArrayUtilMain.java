@@ -5,6 +5,11 @@ import sda.mg.jz127.interfacesample.DefaultCar;
 
 public class ArrayUtilMain {
     public static void main(String[] args) {
+//        testContains();
+        testSwapMethod();
+    }
+
+    private static void testContains() {
         String searchElement = "a";
         boolean result = ArrayUtil.isContainElement(searchElement, "b", "a", "c", "aa", "A", "z");
         System.out.println("Element " + searchElement + " znajduje sie w tablicy: " + result);
@@ -17,5 +22,11 @@ public class ArrayUtilMain {
         Car searchCar = new DefaultCar();
         result = ArrayUtil.isContainElement(searchCar, new DefaultCar(), searchCar, new DefaultCar());
         System.out.println("Element car " + searchCar + " znajduje sie w tablicy: " + result);
+    }
+
+    private static void testSwapMethod() {
+        String[] stringArray = ArrayUtil.swap(0, 3, "a", "b", "c", "d", "e");
+        System.out.println("Po zamianie miejscami elementow:");
+        ArrayUtil.print(stringArray);
     }
 }

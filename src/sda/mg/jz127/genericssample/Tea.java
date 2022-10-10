@@ -1,6 +1,6 @@
 package sda.mg.jz127.genericssample;
 
-public class Tea {
+class Tea {
 
     @Override
     public String toString() {
