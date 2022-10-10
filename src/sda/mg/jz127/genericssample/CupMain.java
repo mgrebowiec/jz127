@@ -15,5 +15,10 @@ public class CupMain {
         Cup<String> stringCup = new Cup<>("Bzdurny tekst");
         stringCup.drink();
 
+        System.out.println("----------------------------------");
+        CupMaker cupMaker = new CupMaker();
+        cupMaker.make(tea).drink();
+        cupMaker.make(coffee).drink();
+        cupMaker.make("jakis string").drink();
     }
 }
