@@ -28,4 +28,14 @@ public class Human {
     public Sex getSex() {
         return sex;
     }
+
+    @Override
+    public String toString() {
+        return "Human{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", sex=" + sex +
+                '}';
+    }
 }
