@@ -1,5 +1,7 @@
 package sda.mg.jz127.collectionsample.zad1;
 
+import java.util.Objects;
+
 public class Human {
     private final String name;
     private final String surname;
@@ -37,5 +39,18 @@ public class Human {
                 ", age=" + age +
                 ", sex=" + sex +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Human human = (Human) o;
+        return age == human.age && name.equals(human.name) && surname.equals(human.surname) && sex == human.sex;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name, surname, age, sex);
     }
 }

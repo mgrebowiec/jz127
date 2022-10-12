@@ -1,9 +1,16 @@
 package sda.mg.jz127.collectionsample.zad1;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class FactoryMain {
     public static void main(String[] args) {
+//        factoryExample();
+        exampleOfEqualsMethodAndSet();
+    }
+
+    private static void factoryExample() {
         Factory factory = new Factory();
         factory.addWorker("jan", "kowalski", 29, Sex.MALE)
                 .addWorker("michal", "grebowiec", 31, Sex.MALE)
@@ -26,6 +33,15 @@ public class FactoryMain {
         System.out.println("Pracownicy po usunieciu ludzi w wieku 29 lat:");
         factory.removeWorkersWithAge(29);
         factory.printWorkers();
+    }
 
+    private static void exampleOfEqualsMethodAndSet() {
+        Set<Human> humans = new HashSet<>();
+        Human human1 = new Human("michal", "grebowiec", 12, Sex.MALE);
+        Human human2 = new Human("michal", "grebowiec", 12, Sex.MALE);
+        humans.add(human1);
+        humans.add(human2);
+
+        System.out.println("Rozmiar: " + humans.size());
     }
 }
